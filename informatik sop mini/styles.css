@@ -1,0 +1,139 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f7f8fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 24px;
+}
+
+label {
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: block;
+    text-align: left;
+    font-size: 16px;
+    color: #666;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #f9fafc;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.1);
+    outline: none;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    width: 100%;
+    display: block;
+}
+
+button:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 20px rgba(0, 123, 255, 0.3);
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 16px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    color: #333;
+    word-wrap: break-word;
+}
+
+.loading {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #007BFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading:after {
+    content: '';
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #007BFF;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    margin-left: 10px;
+    animation: spin 1s linear infinite;
+}
+
+.hidden {
+    display: none;
+}
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}

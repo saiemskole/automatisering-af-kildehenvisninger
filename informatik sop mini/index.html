@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Kildehenvisnings Bot</title>
+    <link rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Automatisk Kildehenvisning</h1>
+
+        <label for="input-type">Vælg kilde type:</label>
+        <select id="input-type">
+            <option value="doi">DOI</option>
+            <option value="isbn">ISBN</option>
+            <option value="url">URL</option>
+        </select>
+
+        <label for="kilde-input">Indsæt din kilde:</label>
+        <input type="text" id="kilde-input" placeholder="Indtast DOI, ISBN eller URL...">
+
+        <label for="style">Vælg citationstil:</label>
+        <select id="style">
+            <option value="apa">APA</option>
+            <option value="mla">MLA</option>
+            <option value="chicago">Chicago</option>
+        </select>
+
+        <button onclick="hentMetadata()">Hent Metadata og Generer Kildehenvisning</button>
+
+        <div class="result" id="result"></div>
+        <div id="loading" class="loading hidden">Henter data...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
